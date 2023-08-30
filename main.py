@@ -18,7 +18,6 @@ class AvitoFavoritesTest(unittest.TestCase):
     def test_add_favorite(self):
         # Переход на страницу избранных
         driver = self.driver
-        driver.get(self.base_url + "/favorites")
 
         # Добавление объявления в избранное с страницы товара
         driver.get(self.base_url + "/nikel/knigi_i_zhurnaly/domain-driven_design_distilled_vaughn_vernon_2639542363")
