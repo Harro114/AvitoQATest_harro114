@@ -16,7 +16,7 @@ class AvitoFavoritesTest(unittest.TestCase):
         self.base_url = "https://www.avito.ru"
 
     def test_add_favorite(self):
-        # Переход на страницу избранных
+
         driver = self.driver
 
         # Добавление объявления в избранное с страницы товара
@@ -24,6 +24,7 @@ class AvitoFavoritesTest(unittest.TestCase):
         add_to_fav_button = driver.find_element(By.CLASS_NAME, "desktop-usq1f1")
         add_to_fav_button.click()
 
+        # Проверка добавления в избранные 
         driver.get(self.base_url + "/favorites")
         try:
             check_fav = driver.find_element(By.XPATH,
