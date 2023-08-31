@@ -29,7 +29,7 @@ class AvitoFavoritesTest(unittest.TestCase):
         try:
             check_fav = driver.find_element(By.XPATH,
                                             '//a[@href="/nikel/knigi_i_zhurnaly/domain-driven_design_distilled_vaughn_vernon_2639542363"]')
-        except AssertionError:
+        except:
             self.assertTrue(False, "Ad not at favorite")
 
     def tearDown(self):
